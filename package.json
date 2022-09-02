@@ -15,7 +15,9 @@
   },
   "scripts": {
     "build": "webpack && cp dist/siema.min.js docs/assets",
-    "dev": "webpack --progress --colors --watch"
+    "dev": "webpack --progress --colors --watch",
+    "lint": "eslint src/*.js",
+    "fix": "eslint src/*.js --fix"
   },
   "files": [
     "dist"
