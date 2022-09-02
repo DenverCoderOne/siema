@@ -20,13 +20,16 @@
   "files": [
     "dist"
   ],
-  "repository": "pawelgrzybek/siema",
-  "author": "Pawel Grzybek <grzybecki@gmail.com> (https://pawelgrzybek.com/)",
+  "repository": "DenverCoderOne/siema",
+  "contributors": [
+    "Pawel Grzybek <grzybecki@gmail.com> (https://pawelgrzybek.com/)",
+    "Jonah Lawrence <jonah@freshidea.com (https://github.com/DenverCoder1)"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pawelgrzybek/siema/issues"
+    "url": "https://github.com/DenverCoderOne/siema/issues"
   },
-  "homepage": "https://pawelgrzybek.com/siema",
+  "homepage": "https://denvercoderone.github.io/siema/",
   "keywords": [
     "slider",
     "carousel",

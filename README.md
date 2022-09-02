@@ -1,12 +1,10 @@
-**Hi. I will be discontinuing active maintenance of Siema. I built it by myself to use on one of my projects. Two years later I consider carousels as an anti-pattern and I would suggest you to find a better UI pattern than carousel for your current project. If you really want to use it, feel free. If you have any questions, please look for the answer in closed issues section. Would you like to contribute or coutinue maintenance of Siema? Fantastic!**
-
-- - -
-
 # Siema - Lightweight and simple carousel with no dependencies
 
-Full docs with examples: [https://pawelgrzybek.github.io/siema/](https://pawelgrzybek.github.io/siema/).
+This is a maintained fork of [Siema](https://github.com/pawelgrzybek/siema) by [Pawel Grzybek](https://github.com/pawelgrzybek).
 
-Siema is a lightweight (only 3kb gzipped) carousel plugin with no dependencies and no styling. As Brad Frost once said "do that shit yourself". It is 100% open source and [available on Github](https://github.com/pawelgrzybek/siema). It is free to use on personal and commercial projects. Use it with your favourite module bundler or by manually injecting the script into your project.
+Full docs with examples: [https://denvercoderone.github.io/siema/](https://denvercoderone.github.io/siema/).
+
+Siema is a lightweight (only 3kb gzipped) carousel plugin with no dependencies and no styling. As Brad Frost once said "do that shit yourself". It is 100% open source and [available on Github](https://github.com/DenverCoderOne/siema). It is free to use on personal and commercial projects. Use it with your favourite module bundler or by manually injecting the script into your project.
 
 ## Installation
 

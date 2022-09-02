@@ -2,7 +2,7 @@
 
 MIT License
 
-Copyright (c) 2017 [Paweł Grzybek](https://pawelgrzybek.com/)
+Copyright (c) 2017-2018 [Paweł Grzybek](https://pawelgrzybek.com/), 2022-Present [DenverCoder1](https://github.com/DenverCoder1)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

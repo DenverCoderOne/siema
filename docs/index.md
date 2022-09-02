@@ -2,18 +2,18 @@
 layout: default
 ---
 
-Siema is a lightweight (only 3kb gzipped) carousel plugin with no dependencies and no styling. As Brad Frost once said "do that shit yourself". It is 100% open source and [available on Github](https://github.com/pawelgrzybek/siema). It is free to use on personal and commercial projects. Use it with your favourite module bundler or by manually injecting the script into your project.
+Siema is a lightweight (only 3kb gzipped) carousel plugin with no dependencies and no styling. As Brad Frost once said "do that shit yourself". It is 100% open source and [available on Github](https://github.com/DenverCoderOne/siema). It is free to use on personal and commercial projects. Use it with your favourite module bundler or by manually injecting the script into your project.
 
-<a href="https://github.com/pawelgrzybek/siema/releases" class="btn">Download Siema from Github</a>
+<a href="https://github.com/DenverCoderOne/siema/releases" class="btn">Download Siema from Github</a>
 
-1. [Installation](#installation)
-2. [Options](#options)
-3. [API](#api)
-4. [Example](#example)
-5. [Browser support](#browser-support)
-6. [Other implementations](#other-implementations)
-7. [Contributing](#contributing)
-8. [Extra](#extra--thanks)
+- [Installation](#installation)
+- [Options](#options)
+- [API](#api)
+- [Example](#example)
+- [Browser support](#browser-support)
+- [Other implementations](#other-implementations)
+- [Contributing](#contributing)
+- [Extra & Thanks](#extra--thanks)
 
 ## Installation
 
