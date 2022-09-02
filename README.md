@@ -1,10 +1,10 @@
-# Siema - Lightweight and simple carousel with no dependencies
+# Siemano - Lightweight and simple carousel with no dependencies
 
-This is a maintained fork of [Siema](https://github.com/pawelgrzybek/siema) by [Paweł Grzybek](https://github.com/pawelgrzybek).
+**This is a maintained fork of [Siema](https://github.com/pawelgrzybek/siema) by [Paweł Grzybek](https://github.com/pawelgrzybek).**
 
-Full docs with examples: [https://denvercoderone.github.io/siema/](https://denvercoderone.github.io/siema/).
+Full docs with examples: [https://denvercoderone.github.io/siemano/](https://denvercoderone.github.io/siema/).
 
-Siema is a lightweight (only 3kb gzipped) carousel plugin with no dependencies and no styling. As Brad Frost once said, "do that shit yourself". It is 100% open source and [available on GitHub](https://github.com/DenverCoderOne/siema). It is free to use on personal and commercial projects. Use it with your favorite module bundler or by manually injecting the script into your project.
+Siemano is a lightweight (only 3kb gzipped) carousel plugin with no dependencies and no styling. As Brad Frost once said, "do that shit yourself". It is 100% open source and [available on GitHub](https://github.com/DenverCoderOne/siemano). It is free to use on personal and commercial projects. Use it with your favorite module bundler or by manually injecting the script into your project.
 
 ## Installation
 
@@ -22,11 +22,11 @@ Setup is trivially easy. A little bit of markup...
 If you are using a module bundler like Webpack or Browserify...
 
 ```
-yarn add siema
+yarn add siemano
 ```
 
 ```js
-import Siema from "siema";
+import Siema from "siemano";
 new Siema();
 ```
 
@@ -41,7 +41,7 @@ new Siema();
 
 ## Options
 
-Siema comes with a few (optional) settings that you can change by passing an object as an argument. Default values are presented below.
+Siemano comes with a few (optional) settings that you can change by passing an object as an argument. Default values are presented below.
 
 ```js
 new Siema({

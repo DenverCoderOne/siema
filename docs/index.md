@@ -2,9 +2,11 @@
 layout: default
 ---
 
-Siema is a lightweight (only 3kb gzipped) carousel plugin with no dependencies and no styling. As Brad Frost once said, "do that shit yourself". It is 100% open source and [available on GitHub](https://github.com/DenverCoderOne/siema). It is free to use on personal and commercial projects. Use it with your favorite module bundler or by manually injecting the script into your project.
+Siemano is a lightweight (only 3kb gzipped) carousel plugin with no dependencies and no styling. As Brad Frost once said, "do that shit yourself". It is 100% open source and [available on GitHub](https://github.com/DenverCoderOne/siemano). It is free to use on personal and commercial projects. Use it with your favorite module bundler or by manually injecting the script into your project.
 
-<a href="https://github.com/DenverCoderOne/siema/releases" class="btn">Download Siema from Github</a>
+This is a maintained fork of [Siema](https://github.com/pawelgrzybek/siema) by [Paweł Grzybek](https://github.com/pawelgrzybek).
+
+<a href="https://github.com/DenverCoderOne/siemano/releases" class="btn">Download Siemano from Github</a>
 
 - [Installation](#installation)
 - [Options](#options)
@@ -31,11 +33,11 @@ Setup is trivially easy. A little bit of markup...
 If you are using a module bundler like Webpack or Browserify...
 
 ```
-yarn add siema
+yarn add siemano
 ```
 
 ```js
-import Siema from 'siema';
+import Siema from "siemano";
 new Siema();
 ```
 
@@ -55,13 +57,13 @@ new Siema();
 
 ## Options
 
-Siema comes with a few (optional) settings that you can change by passing an object as an argument. Default values are presented below.
+Siemano comes with a few (optional) settings that you can change by passing an object as an argument. Default values are presented below.
 
 ```js
 new Siema({
-  selector: '.siema',
+  selector: ".siema",
   duration: 200,
-  easing: 'ease-out',
+  easing: "ease-out",
   perPage: 1,
   startIndex: 0,
   draggable: true,
@@ -112,7 +114,7 @@ Runs after slide change [(example)](http://codepen.io/pawelgrzybek/pen/RVbrVe).
 
 ## API
 
-As mentioned above, Siema doesn't come with many options - just a few useful methods. Combine it with some very basic JavaScript and voila!
+As mentioned above, Siemano doesn't come with many options - just a few useful methods. Combine it with some very basic JavaScript and voila!
 
 **`prev(howManySlides = 1, callback)`**  
 Go to the previous item [(example)](http://codepen.io/pawelgrzybek/pen/JNPKVE). Optionally slide a few items backward by passing `howManySlides` (number) argument [(example)](http://codepen.io/pawelgrzybek/pen/wdwWZQ). Optional `callback` (function) available as a third argument [(example)](http://codepen.io/pawelgrzybek/pen/JNPKQW).
@@ -147,10 +149,10 @@ Basic carousel with next and previous buttons.
 
 ```html
 <div class="siema">
-  <img src="assets/siema--pink.svg">
-  <img src="assets/siema--yellow.svg">
-  <img src="assets/siema--pink.svg">
-  <img src="assets/siema--yellow.svg">
+  <img src="assets/siema--pink.svg" />
+  <img src="assets/siema--yellow.svg" />
+  <img src="assets/siema--pink.svg" />
+  <img src="assets/siema--yellow.svg" />
 </div>
 
 <button class="prev">prev</button>
@@ -159,8 +161,8 @@ Basic carousel with next and previous buttons.
 
 ```js
 const mySiema = new Siema();
-document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
-document.querySelector('.next').addEventListener('click', () => mySiema.next());
+document.querySelector(".prev").addEventListener("click", () => mySiema.prev());
+document.querySelector(".next").addEventListener("click", () => mySiema.next());
 ```
 
 <div class="siema">
@@ -185,13 +187,13 @@ I've also created a Codepen collection with tons of Siema examples.
 
 ## Browser support
 
-  - IE10
-  - Chrome 12
-  - Firefox 16
-  - Opera 15
-  - Safari 5.1
-  - Android Browser 4.0
-  - iOS Safari 6.0
+- IE10
+- Chrome 12
+- Firefox 16
+- Opera 15
+- Safari 5.1
+- Android Browser 4.0
+- iOS Safari 6.0
 
 ## Other implementations
 
@@ -200,9 +202,9 @@ I've also created a Codepen collection with tons of Siema examples.
 - [Vue version](https://www.npmjs.com/package/vue2-siema) by Carlos Nogueira
 - [Siema-rails](https://github.com/Naggi-Goishi/siema-rails) by Naggi Goishi
 
-
 ## Contributing
-Siema's purpose is to provide a basic carousel tool and allow developers to extend it by using the available methods. It doesn't come with any complex configuration and myriad options — I would like to keep it this way. If you need a more powerful library I recommend the amazing [Flickity](http://flickity.metafizzy.co/) by David DeSandro or [Swiper](http://idangero.us/swiper/) by iDangero team.
+
+Siemano's purpose is to provide a basic carousel tool and allow developers to extend it by using the available methods. It doesn't come with any complex configuration and myriad options — I would like to keep it this way. If you need a more powerful library I recommend the amazing [Flickity](http://flickity.metafizzy.co/) by David DeSandro or [Swiper](http://idangero.us/swiper/) by iDangero team.
 
 Bug fixes are more than welcome. If you have a feature suggestion please [open an issue](https://github.com/pawelgrzybek/siema/issues) on Github. Before sending a pull request make sure to use the `build` task please.
 
