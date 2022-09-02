@@ -16,8 +16,8 @@ Make sure your request is meaningful and you have tested the app locally before 
 ### Clone the repository
 
 ```
-git clone https://github.com/DenverCoderOne/siema.git
-cd siema
+git clone https://github.com/DenverCoderOne/siemano.git
+cd siemano
 ```
 
 ### Installing dependencies
@@ -26,7 +26,7 @@ cd siema
 npm ci
 ```
 
-### Build locally
+### Build locally on save
 
 ```bash
 npm run dev

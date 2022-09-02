@@ -1,7 +1,7 @@
 {
-  "name": "siema",
+  "name": "siemano",
   "version": "1.5.2",
-  "description": "Lightweight and simple carousel with no dependencies",
+  "description": "Maintained fork of Siema - Lightweight and simple carousel with no dependencies",
   "main": "dist/siema.min.js",
   "devDependencies": {
     "babel": "^6.23.0",
@@ -22,16 +22,16 @@
   "files": [
     "dist"
   ],
-  "repository": "DenverCoderOne/siema",
+  "repository": "DenverCoderOne/siemano",
   "contributors": [
     "Pawel Grzybek <grzybecki@gmail.com> (https://pawelgrzybek.com/)",
     "Jonah Lawrence <jonah@freshidea.com (https://github.com/DenverCoder1)"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DenverCoderOne/siema/issues"
+    "url": "https://github.com/DenverCoderOne/siemano/issues"
   },
-  "homepage": "https://denvercoderone.github.io/siema/",
+  "homepage": "https://denvercoderone.github.io/siemano/",
   "keywords": [
     "slider",
     "carousel",
