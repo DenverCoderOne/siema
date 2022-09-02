@@ -152,6 +152,20 @@ export default class Siema {
     this.config.onInit.call(this);
   }
 
+  /**
+   * Sanitize a clone by recursively remove all id and name attributes.
+   *
+   * @param {*} node - The root node to sanitize.
+   */
+  sanitizeClone(node) {
+    Array.from(node.childNodes).forEach(child => {
+      if (child.nodeType === 1) {
+        child.removeAttribute('id');
+        child.removeAttribute('name');
+        this.sanitizeClone(child);
+      }
+    });
+  }
 
   /**
    * Build a sliderFrame and slide to a current item.
@@ -186,6 +200,7 @@ export default class Siema {
     if (this.config.loop) {
       for (let i = 0; i < this.perPage; i++) {
         const element = this.buildSliderFrameItem(this.innerElements[i].cloneNode(true));
+        this.sanitizeClone(element);
         docFragment.appendChild(element);
       }
     }
