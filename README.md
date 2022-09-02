@@ -2,7 +2,7 @@
 
 **This is a maintained fork of [Siema](https://github.com/pawelgrzybek/siema) by [Paweł Grzybek](https://github.com/pawelgrzybek).**
 
-Full docs with examples: [https://denvercoderone.github.io/siemano/](https://denvercoderone.github.io/siema/).
+Full docs with examples: [https://denvercoderone.github.io/siemano/](https://denvercoderone.github.io/siemano/).
 
 Siemano is a lightweight (only 3kb gzipped) carousel plugin with no dependencies and no styling. As Brad Frost once said, "do that shit yourself". It is 100% open source and [available on GitHub](https://github.com/DenverCoderOne/siemano). It is free to use on personal and commercial projects. Use it with your favorite module bundler or by manually injecting the script into your project.
 
