@@ -155,8 +155,7 @@ export default class Siema {
 
   /**
    * Sanitize a clone by recursively remove all id and name attributes.
-   *
-   * @param {*} node - The root node to sanitize.
+   * @param {HTMLElement} node - The root node to sanitize.
    */
   sanitizeClone(node) {
     Array.from(node.childNodes).forEach(child => {
@@ -252,9 +251,9 @@ export default class Siema {
   /**
    * Go to previous slide.
    * @param {number} [howManySlides=1] - How many items to slide backward.
-   * @param {function} callback - Optional callback function.
+   * @param {function?} callback - Optional callback function.
    */
-  prev(howManySlides = 1, callback) {
+  prev(howManySlides = 1, callback = null) {
     // early return when there is nothing to slide
     if (this.innerElements.length <= this.perPage) {
       return;
@@ -297,9 +296,9 @@ export default class Siema {
   /**
    * Go to next slide.
    * @param {number} [howManySlides=1] - How many items to slide forward.
-   * @param {function} callback - Optional callback function.
+   * @param {function?} callback - Optional callback function.
    */
-  next(howManySlides = 1, callback) {
+  next(howManySlides = 1, callback = null) {
     // early return when there is nothing to slide
     if (this.innerElements.length <= this.perPage) {
       return;
@@ -359,9 +358,9 @@ export default class Siema {
   /**
    * Go to slide with particular index
    * @param {number} index - Item index to slide to.
-   * @param {function} callback - Optional callback function.
+   * @param {function?} callback - Optional callback function.
    */
-  goTo(index, callback) {
+  goTo(index, callback = null) {
     if (this.innerElements.length <= this.perPage) {
       return;
     }
@@ -605,9 +604,9 @@ export default class Siema {
   /**
    * Remove item from carousel.
    * @param {number} index - Item index to remove.
-   * @param {function} callback - Optional callback to call after remove.
+   * @param {function?} callback - Optional callback to call after remove.
    */
-  remove(index, callback) {
+  remove(index, callback = null) {
     if (index < 0 || index >= this.innerElements.length) {
       throw new Error('Item to remove doesn\'t exist 😭');
     }
@@ -637,9 +636,9 @@ export default class Siema {
    * Insert item to carousel at particular index.
    * @param {HTMLElement} item - Item to insert.
    * @param {number} index - Index of new new item insertion.
-   * @param {function} callback - Optional callback to call after insert.
+   * @param {function?} callback - Optional callback to call after insert.
    */
-  insert(item, index, callback) {
+  insert(item, index, callback = null) {
     if (index < 0 || index > this.innerElements.length + 1) {
       throw new Error('Unable to inset it at this index 😭');
     }
@@ -665,9 +664,9 @@ export default class Siema {
   /**
    * Prepernd item to carousel.
    * @param {HTMLElement} item - Item to prepend.
-   * @param {function} callback - Optional callback to call after prepend.
+   * @param {function?} callback - Optional callback to call after prepend.
    */
-  prepend(item, callback) {
+  prepend(item, callback = null) {
     this.insert(item, 0);
     if (callback) {
       callback.call(this);
@@ -678,9 +677,9 @@ export default class Siema {
   /**
    * Append item to carousel.
    * @param {HTMLElement} item - Item to append.
-   * @param {function} callback - Optional callback to call after append.
+   * @param {function?} callback - Optional callback to call after append.
    */
-  append(item, callback) {
+  append(item, callback = null) {
     this.insert(item, this.innerElements.length + 1);
     if (callback) {
       callback.call(this);
@@ -691,17 +690,17 @@ export default class Siema {
   /**
    * Removes listeners and optionally restores to initial markup
    * @param {boolean} restoreMarkup - Determinants about restoring an initial markup.
-   * @param {function} callback - Optional callback function.
+   * @param {function?} callback - Optional callback function.
    */
-  destroy(restoreMarkup = false, callback) {
+  destroy(restoreMarkup = false, callback = null) {
     this.detachEvents();
 
     this.selector.style.cursor = 'auto';
 
     if (restoreMarkup) {
       const slides = document.createDocumentFragment();
-      for (let i = 0; i < this.innerElements.length; i++) {
-        slides.appendChild(this.innerElements[i]);
+      for (const element of this.innerElements) {
+        slides.appendChild(element);
       }
       this.selector.innerHTML = '';
       this.selector.appendChild(slides);
