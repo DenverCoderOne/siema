@@ -55,6 +55,7 @@ new Siema({
   threshold: 20,
   loop: false,
   rtl: false,
+  autoHeight: false,
   onInit: () => {},
   onChange: () => {},
   onResize: () => {},
@@ -90,6 +91,9 @@ Loop the slides around [(example)](http://codepen.io/pawelgrzybek/pen/zwOrKN).
 
 **`rtl`** (boolean)  
 Enables layout for languages written from right to left (like Hebrew or Arabic) [(example)](https://codepen.io/pawelgrzybek/pen/XZNEgd).
+
+**`autoHeight`** (boolean)
+Enable automatically adjusting the height of the frame to match the currently active slides [(example)](https://codepen.io/eyl327/pen/abGzOrx).
 
 **`onInit`** (function)  
 Runs immediately after initialization [(example)](http://codepen.io/pawelgrzybek/pen/BRBjpE).

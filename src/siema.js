@@ -56,6 +56,7 @@ export default class Siema {
       threshold: 20,
       loop: false,
       rtl: false,
+      autoHeight: false,
       onInit: () => {},
       onChange: () => {},
       onResize: () => {},
@@ -179,6 +180,10 @@ export default class Siema {
     this.sliderFrame.classList.add('siema__frame');
     this.sliderFrame.style.width = `${widthItem * itemsToBuild}px`;
     this.enableTransition();
+
+    if (this.config.autoHeight) {
+      this.sliderFrame.style.overflow = 'hidden';
+    }
 
     if (this.config.draggable) {
       this.selector.style.cursor = '-webkit-grab';
@@ -377,6 +382,19 @@ export default class Siema {
     }
   }
 
+  /**
+   * Adjust height of the frame to fit the currently visible slides. Called when autoHeight is set to true.
+   */
+  adjustHeight() {
+    const activeSlides = this.innerElements.slice(this.currentSlide, this.currentSlide + this.perPage);
+    if (activeSlides.length === 0) {
+      return;
+    }
+    const maxActiveHeight = Math.max(...activeSlides.map(el => el.scrollHeight));
+    this.lastFrameHeight = `${maxActiveHeight}px`;
+    this.sliderFrame.style.maxHeight = this.lastFrameHeight;
+  }
+
 
   /**
    * Moves sliders frame to position of currently active slide
@@ -397,6 +415,13 @@ export default class Siema {
     }
     else {
       this.sliderFrame.style[this.transformProperty] = `translate3d(${offset}px, 0, 0)`;
+    }
+
+    // adjust height of the slider frame if autoHeight is set to true
+    // sometimes content loading can be slow, so run it after a short delay
+    if (this.config.autoHeight) {
+      clearTimeout(this.autoHeightTimeout);
+      this.autoHeightTimeout = setTimeout(this.adjustHeight.bind(this), 250);
     }
   }
 
@@ -438,6 +463,14 @@ export default class Siema {
     this.selectorWidth = this.selector.offsetWidth;
 
     this.buildSliderFrame();
+
+    // adjust height of the slider frame if autoHeight is set to true
+    // to avoid a flickering effect, adjust the height before a short timeout
+    if (this.config.autoHeight) {
+      this.sliderFrame.style.maxHeight = this.lastFrameHeight;
+      clearTimeout(this.autoHeightTimeout);
+      this.autoHeightTimeout = setTimeout(this.adjustHeight.bind(this), 250);
+    }
 
     this.config.onResize.call(this);
   }
