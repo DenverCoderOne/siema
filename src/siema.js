@@ -58,6 +58,7 @@ export default class Siema {
       rtl: false,
       onInit: () => {},
       onChange: () => {},
+      onResize: () => {},
     };
 
     const userSttings = options;
@@ -434,6 +435,8 @@ export default class Siema {
     this.selectorWidth = this.selector.offsetWidth;
 
     this.buildSliderFrame();
+
+    this.config.onResize.call(this);
   }
 
 
