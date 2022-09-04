@@ -108,7 +108,7 @@ Loop the slides around [(example)](http://codepen.io/pawelgrzybek/pen/zwOrKN).
 **`rtl`** (boolean)  
 Enables layout for languages written from right to left (like Hebrew or Arabic) [(example)](https://codepen.io/pawelgrzybek/pen/XZNEgd).
 
-**`autoHeight`** (boolean)
+**`autoHeight`** (boolean)  
 Enable automatically adjusting the height of the frame to match the currently active slides [(example)](https://codepen.io/eyl327/pen/abGzOrx).
 
 **`onInit`** (function)  
@@ -117,7 +117,7 @@ Runs immediately after initialization [(example)](http://codepen.io/pawelgrzybek
 **`onChange`** (function)  
 Runs after slide change [(example)](http://codepen.io/pawelgrzybek/pen/RVbrVe).
 
-**`onResize`** (function)
+**`onResize`** (function)  
 Runs on window resize after the frame is rebuilt [(example)](https://codepen.io/eyl327/pen/OJZPVRy).
 
 ## API
