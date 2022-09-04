@@ -177,6 +177,7 @@ export default class Siema {
 
     // Create frame and apply styling
     this.sliderFrame = document.createElement('div');
+    this.sliderFrame.classList.add('siema__frame');
     this.sliderFrame.style.width = `${widthItem * itemsToBuild}px`;
     this.enableTransition();
 
@@ -191,16 +192,19 @@ export default class Siema {
     if (this.config.loop) {
       for (let i = this.innerElements.length - this.perPage; i < this.innerElements.length; i++) {
         const element = this.buildSliderFrameItem(this.innerElements[i].cloneNode(true));
+        element.classList.add('siema__item', 'siema__item--clone');
         docFragment.appendChild(element);
       }
     }
-    for (let i = 0; i < this.innerElements.length; i++) {
-      const element = this.buildSliderFrameItem(this.innerElements[i]);
+    for (const innerElement of this.innerElements) {
+      const element = this.buildSliderFrameItem(innerElement);
+      element.classList.add('siema__item');
       docFragment.appendChild(element);
     }
     if (this.config.loop) {
       for (let i = 0; i < this.perPage; i++) {
         const element = this.buildSliderFrameItem(this.innerElements[i].cloneNode(true));
+        element.classList.add('siema__item', 'siema__item--clone');
         this.sanitizeClone(element);
         docFragment.appendChild(element);
       }
