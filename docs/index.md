@@ -30,7 +30,7 @@ Setup is trivially easy. A little bit of markup...
 </div>
 ```
 
-If you are using a module bundler like Webpack or Browserify...
+**Option 1:** If you are using a module bundler like Webpack or Browserify...
 
 ```
 yarn add siemano
@@ -41,10 +41,19 @@ import Siema from "siemano";
 new Siema();
 ```
 
-...or manually inject the minified script into your website.
+**Option 2:** Install from a CDN such as [jsDelivr](https://www.jsdelivr.com/package/npm/siemano)...
 
 ```html
-<script src="siema.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/DenverCoderOne/siemano@1.6.0/dist/siema.min.js" type="text/javascript"></script>
+<script>
+  new Siema();
+</script>
+```
+
+**Option 3:** Manually inject the minified script into your website...
+
+```html
+<script src="siema.min.js" type="text/javascript"></script>
 <script>
   new Siema();
 </script>
